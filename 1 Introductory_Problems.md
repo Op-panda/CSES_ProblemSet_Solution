@@ -151,13 +151,19 @@ signed main()
 ### [Bit Strings](https://cses.fi/problemset/task/1617/)
 
 ```cpp
-signed main()
+#define ll long long
+int main()
 {
-    ios_base::sync_with_stdio(false); cin.tie(NULL);
-    int n; cin >> n;
-    cout << powMod(2, n) << '\n';
+   ll n, ans=1;
+   cin>>n;
+   for(int i=0; i<n; ++i){
+    ans= 2* ans % ((int)1e9+7);
+   }
+    cout<<ans;
+
     return 0;
 }
+
 ```
 
 ### [Trailing Zeros](https://cses.fi/problemset/task/1618/)
